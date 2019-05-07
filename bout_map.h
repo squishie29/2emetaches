@@ -7,5 +7,5 @@
 #include"SDL/SDL_image.h"
 #include"SDL/SDL_mixer.h"
 #include"SDL/SDL_ttf.h"
-void bout(enemyt* enemy,SDL_Surface* ecran,SDL_Rect poschar,int a,int *realtime);
+void bout(enemyt* enemy,SDL_Surface* ecran,SDL_Rect poschar,int a,group x);
 #endif

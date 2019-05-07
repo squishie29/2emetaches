@@ -1,3 +1,12 @@
+/**
+* @file splitscreen.c
+* @brief split screen.
+* @author Guesmi Rami
+* @version 0.1
+* @date Mai, 5 2018
+*
+* function split screen
+*/
 #include "SDL/SDL.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -32,7 +41,6 @@ void split(group* x,controls set1,controls set2,SDL_Rect* poschar,SDL_Rect* pose
     if((poschar->x+char1->w)>0)
     {
       poschar->x--;
-      (*x).j1--;
     }
     else
     if(poscam->x<(background->w-ecran->w/2))
@@ -63,7 +71,6 @@ void split(group* x,controls set1,controls set2,SDL_Rect* poschar,SDL_Rect* pose
   if((poschar2->x+char2->w)>(ecran->w/2+char2->w))
     {
       poschar2->x--;
-      (*x).j2--;
     }
     else
     if (poscam2->x<(background->w-ecran->w/2))

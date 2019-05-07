@@ -1,3 +1,12 @@
+/**
+* @file main.c
+* @brief test environnement.
+* @author Guesmi Rami
+* @version 0.1
+* @date Mai, 5 2018
+*
+* Test environnement
+*/
 #include "SDL/SDL.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -91,8 +100,9 @@ while (continuer)
                 case SDL_KEYDOWN  :
                 {
                   split(&x,set1,set2,&poschar,posecran1,&poschar2,ecran,background,char1,char2,&poscam,&poscam2);
-                  bout(&enemy,ecran,poscam,where,&realtime);
-                  //printf("%d\n",x.j1 );
+                  bout(&enemy,ecran,poscam,where,x);
+                  printf("pos joeur%d\n ",x.j1 );
+                  printf("pos enemy%d\n",enemy.pos.x);
                 }
                 }
 SDL_BlitSurface(background, &poscam ,ecran,NULL);
@@ -100,7 +110,6 @@ SDL_BlitSurface(background, &poscam2 ,ecran, posecran1);
 SDL_BlitSurface(char2, NULL ,ecran,&poschar2);
 SDL_BlitSurface(char1, NULL ,ecran,&poschar);
 SDL_BlitSurface(enemy.perso,NULL,ecran,&enemy.pos);
-//printf("%d\n",enemy.pos.y);
 
     SDL_Flip(ecran);
 
